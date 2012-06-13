@@ -164,7 +164,7 @@ namespace Boxup
                                                 boxInfo.BoxName = mainBoxItemInfo.ItemName.Split("~".ToCharArray())[0];
                                                 boxInfo.BoxSpec = mainBoxItemInfo.ItemName.Split("~".ToCharArray())[1];
                                                 boxInfo.BoxNo = int.Parse(detailItems[i].Trim());
-                                                boxInfo.BoxDate = DateTime.Today;
+                                                boxInfo.BoxDate = this.CurrentDate;
                                                 if (DataRepository.BoxProvider.Insert(boxInfo, trans) == 0)
                                                 {
                                                     trans.Rollback();
