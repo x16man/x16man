@@ -97,7 +97,7 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
-  <Width>21cm</Width>
+  <Width>23.07937cm</Width>
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>
@@ -114,7 +114,6 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
             </Grouping>
           </TableGroup>
         </TableGroups>
-        <Width>20.55291cm</Width>
         <Details>
           <TableRows>
             <TableRow>
@@ -192,6 +191,27 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
                 </TableCell>
                 <TableCell>
                   <ReportItems>
+                    <Textbox Name="Length">
+                      <rd:DefaultName>Length</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>宋体</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Length.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
                     <Textbox Name="ItemNum">
                       <rd:DefaultName>ItemNum</rd:DefaultName>
                       <Style>
@@ -200,7 +220,7 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
                         </BorderStyle>
                         <FontFamily>宋体</FontFamily>
                         <FontSize>9pt</FontSize>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -208,6 +228,27 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
                       </Style>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!ItemNum.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox14">
+                      <rd:DefaultName>textbox14</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>宋体</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Length.Value*Fields!ItemNum.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -414,7 +455,7 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
             <TableRow>
               <TableCells>
                 <TableCell>
-                  <ColSpan>11</ColSpan>
+                  <ColSpan>13</ColSpan>
                   <ReportItems>
                     <Textbox Name="textbox28">
                       <rd:DefaultName>textbox28</rd:DefaultName>
@@ -506,6 +547,28 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
                 </TableCell>
                 <TableCell>
                   <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>宋体</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>米数</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
                     <Textbox Name="textbox10">
                       <rd:DefaultName>textbox10</rd:DefaultName>
                       <Style>
@@ -523,6 +586,28 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
                       </Style>
                       <CanGrow>true</CanGrow>
                       <Value>数量</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox13">
+                      <rd:DefaultName>textbox13</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>宋体</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>总米数</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -706,10 +791,16 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
             <Width>1.25cm</Width>
           </TableColumn>
           <TableColumn>
+            <Width>1.25cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.25cm</Width>
+          </TableColumn>
+          <TableColumn>
             <Width>1.27646cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.75cm</Width>
+            <Width>2.77646cm</Width>
           </TableColumn>
           <TableColumn>
             <Width>1.75cm</Width>
@@ -806,8 +897,60 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
                 </TableCell>
                 <TableCell>
                   <ReportItems>
+                    <Textbox Name="textbox8">
+                      <rd:DefaultName>textbox8</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Top>Black</Top>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Top>1pt</Top>
+                        </BorderWidth>
+                        <FontFamily>宋体</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
                     <Textbox Name="textbox12">
                       <rd:DefaultName>textbox12</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Top>Black</Top>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Top>1pt</Top>
+                        </BorderWidth>
+                        <FontFamily>宋体</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox15">
+                      <rd:DefaultName>textbox15</rd:DefaultName>
                       <Style>
                         <BorderColor>
                           <Top>Black</Top>
@@ -1029,6 +1172,7 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
       <Textbox Name="textbox16">
         <rd:DefaultName>textbox16</rd:DefaultName>
         <Top>0.25cm</Top>
+        <Width>21cm</Width>
         <Style>
           <FontFamily>宋体</FontFamily>
           <FontSize>9pt</FontSize>

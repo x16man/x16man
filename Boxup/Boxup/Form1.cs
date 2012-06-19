@@ -140,7 +140,7 @@ namespace Boxup
                                     //if (items.Find(item => item.ItemName == boxItems[2].Trim()) != null)
                                     if(items.Find(item=>item.ItemName.Equals(model,StringComparison.OrdinalIgnoreCase))!=null)
                                         mainBoxItemInfo = new BoxItemInfo { ItemModel = boxItems[1].Trim(), ItemName = boxItems[2].Trim() };
-                                    else if (boxItems[2].Contains("24#箱~"))
+                                    else if (boxItems[2].Contains("#箱~"))
                                     {
                                         mainBoxItemInfo = new BoxItemInfo { ItemModel = boxItems[1].Trim(), ItemName = boxItems[2].Trim() };
                                     }
@@ -155,7 +155,7 @@ namespace Boxup
                                     var detailItems = line.Split("\t".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
                                     if (detailItems.Length % 3 == 0)
                                     {
-                                        if (mainBoxItemInfo.ItemName.Contains("24#箱~"))
+                                        if (mainBoxItemInfo.ItemName.Contains("#箱~"))
                                         {
                                             for (var i = 0; i < detailItems.Length; i = i + 3)
                                             {
