@@ -97,7 +97,7 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
-  <Width>23.07937cm</Width>
+  <Width>23.25cm</Width>
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>
@@ -114,6 +114,7 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
             </Grouping>
           </TableGroup>
         </TableGroups>
+        <Width>23.07937cm</Width>
         <Details>
           <TableRows>
             <TableRow>
@@ -314,7 +315,7 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=iif(left(Fields!BoxModel.Value,1)="E","出口","")</Value>
+                      <Value>=iif(left(Fields!BoxModel.Value,1)="E","出口",iif(left(Fields!BoxModel.Value,1)="S","铁箱",""))</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -423,15 +424,15 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
                       </Style>
                       <CanGrow>true</CanGrow>
                       <Value>=iif(Fields!Model.Value="Z135A08HP" and 
-    (Instr(Fields!ContractNo.Value,"N3V")&gt;=0 or Instr(Fields!ContractNo.Value,"N2C")&gt;=0) And
+    (Instr(Fields!ContractNo.Value,"N3V")&gt;0 or Instr(Fields!ContractNo.Value,"N2C")&gt;0) And
     Fields!Length.Value&lt;150 ,
     "320*320*370",
     iif(Fields!Model.Value="Z135A08HP" and 
-       (Instr(Fields!ContractNo.Value,"N3V")&gt;=0 or Instr(Fields!ContractNo.Value,"N2C")&gt;=0) And
+       (Instr(Fields!ContractNo.Value,"N3V")&gt;0 or Instr(Fields!ContractNo.Value,"N2C")&gt;0) And
         Fields!Length.Value&gt;=150,
     "470*470*380",
     iif(
-		(InStr(Fields!ContractNo.Value,"N2M")&gt;=0 or Instr(Fields!ContractNo.Value,"NEX")&gt;=0 or Instr(Fields!ContractNo.Value,"GPM")&gt;=0) And
+		(InStr(Fields!ContractNo.Value,"N2M")&gt;0 or Instr(Fields!ContractNo.Value,"NEX")&gt;0 or Instr(Fields!ContractNo.Value,"GPM")&gt;0) And
 		(Fields!d.Value=12 or Fields!d.Value=14 or Fields!d.Value=16),
 		"900*900*500",
 		""
@@ -1172,7 +1173,7 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
       <Textbox Name="textbox16">
         <rd:DefaultName>textbox16</rd:DefaultName>
         <Top>0.25cm</Top>
-        <Width>21cm</Width>
+        <Width>22.75cm</Width>
         <Style>
           <FontFamily>宋体</FontFamily>
           <FontSize>9pt</FontSize>

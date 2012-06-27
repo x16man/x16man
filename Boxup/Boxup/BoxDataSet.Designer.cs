@@ -4964,16 +4964,25 @@ Order By Box.BoxSpec,BoxItem.ItemModel";
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT BoxContract.ContractNo, BoxItem.BoxNo, BoxItem.ItemName, BoxItem.ItemModel,Left(BoxItem.ItemModel,Instr(BoxItem.ItemModel,'L')-1) as Model,Right(BoxItem.ItemModel,Len(BoxItem.ItemModel)-Instr(BoxItem.ItemModel,'L')) as Length,
-      BoxItem.ItemNum, BoxContract.BoxDate,Box.BoxSpec,Box.BoxModel,Item.d
-FROM BoxContract ,BoxItem, Box, Item
-Where  BoxContract.BoxDate = BoxItem.BoxDate AND
-       BoxContract.BoxDate = Box.BoxDate And 
-      BoxContract.BoxNo = BoxItem.BoxNo And
-      BoxContract.BoxNo = Box.BoxNo And
-     BoxContract.BoxDate = ? And
-      Left(BoxItem.ItemModel,Instr(BoxItem.ItemModel,'L')-1)=Item.ItemName
-Order By Box.BoxNo ASC,BoxContract.ContractNo ASC,BoxItem.ItemNum DESC";
+            this._commandCollection[0].CommandText = @"Select BoxContract.ContractNo,BoxContract.BoxNo,A.ItemName,A.ItemModel,A.Model,A.Length,A.ItemNum,A.d,A.BoxDate,Box.BoxSpec,Box.BoxModel
+From ((BoxContract Left Outer Join
+       (Select BoxItem.BoxNo,BoxItem.ItemName,BoxItem.ItemModel,
+               IIF(IsNull(BoxItem.ItemModel),null,Left(BoxItem.ItemModel,Instr(BoxItem.ItemModel,'L')-1)) as Model,
+               IIF(IsNULL(BoxItem.ItemModel),null,Right(BoxItem.ItemModel,Len(BoxItem.ItemModel)-Instr(BoxItem.ItemModel,'L'))) as Length,
+               BoxItem.ItemNum,Item.d,BoxItem.BoxDate
+        From BoxItem Inner Join Item
+        ON Left(BoxItem.ItemModel,Instr(BoxItem.ItemModel,'L')-1)=Item.ItemName) As A
+On BoxContract.BoxNo = A.BoxNo And
+   BoxContract.BoxDate = A.BoxDate)
+Left Outer Join Box
+On BoxContract.BoxNo = Box.BoxNo And
+   BoxContract.BoxDate = Box.BoxDate)
+Where BoxContract.BoxDate = ?
+Order By Box.BoxNo ASC,BoxContract.ContractNo ASC,A.ItemNum DESC
+
+
+
+";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BoxDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BoxDate", global::System.Data.DataRowVersion.Current, false, null));
         }
