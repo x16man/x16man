@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BoxDataSet = new Boxup.BoxDataSet();
             this.DataTable2BindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -39,6 +40,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.dtpBoxDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.btnShowReport = new System.Windows.Forms.Button();
@@ -50,7 +52,8 @@
             this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.DataTable1TableAdapter = new Boxup.BoxDataSetTableAdapters.DataTable1TableAdapter();
             this.DataTable2TableAdapter = new Boxup.BoxDataSetTableAdapters.DataTable2TableAdapter();
-            this.button2 = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BoxDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable2BindingSource)).BeginInit();
@@ -59,6 +62,7 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // DataTable1BindingSource
@@ -121,6 +125,16 @@
             this.panel1.Size = new System.Drawing.Size(900, 43);
             this.panel1.TabIndex = 3;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(761, 11);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 23);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "物料特征维护";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // dtpBoxDate
             // 
             this.dtpBoxDate.Location = new System.Drawing.Point(52, 11);
@@ -160,6 +174,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -170,10 +185,10 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.reportViewer1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 21);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(892, 303);
+            this.tabPage1.Size = new System.Drawing.Size(892, 302);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "装箱计划表";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -187,16 +202,16 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Boxup.Reports.BoxPlan.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(3, 3);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(886, 297);
+            this.reportViewer1.Size = new System.Drawing.Size(886, 296);
             this.reportViewer1.TabIndex = 0;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.reportViewer2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 21);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(819, 303);
+            this.tabPage2.Size = new System.Drawing.Size(892, 302);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "钢丝绳任务单";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -210,7 +225,7 @@
             this.reportViewer2.LocalReport.ReportEmbeddedResource = "Boxup.Reports.ContractTask.rdlc";
             this.reportViewer2.Location = new System.Drawing.Point(3, 3);
             this.reportViewer2.Name = "reportViewer2";
-            this.reportViewer2.Size = new System.Drawing.Size(813, 297);
+            this.reportViewer2.Size = new System.Drawing.Size(886, 296);
             this.reportViewer2.TabIndex = 0;
             // 
             // DataTable1TableAdapter
@@ -221,15 +236,28 @@
             // 
             this.DataTable2TableAdapter.ClearBeforeFill = true;
             // 
-            // button2
+            // tabPage3
             // 
-            this.button2.Location = new System.Drawing.Point(761, 11);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "物料特征维护";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.tabPage3.Controls.Add(this.reportViewer3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(892, 302);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "钢丝绳任务单导出模式";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // reportViewer3
+            // 
+            this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource3.Name = "BoxDataSet_DataTable2";
+            reportDataSource3.Value = this.DataTable2BindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer3.LocalReport.ReportEmbeddedResource = "Boxup.Reports.ContractTaskExport.rdlc";
+            this.reportViewer3.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer3.Name = "reportViewer3";
+            this.reportViewer3.Size = new System.Drawing.Size(886, 296);
+            this.reportViewer3.TabIndex = 1;
             // 
             // Form1
             // 
@@ -250,6 +278,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -276,6 +305,8 @@
         private System.Windows.Forms.BindingSource DataTable2BindingSource;
         private Boxup.BoxDataSetTableAdapters.DataTable2TableAdapter DataTable2TableAdapter;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer3;
     }
 }
 

@@ -97,6 +97,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\BoxPlan.rdlc" />
     <EmbeddedResource Include="Reports\ContractTask.rdlc" />
+    <EmbeddedResource Include="Reports\ContractTaskExport.rdlc" />
+    <EmbeddedResource Include="Reports\BoxPlanNew.rdlc" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>

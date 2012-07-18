@@ -123,13 +123,13 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
                   <ReportItems>
                     <Textbox Name="BoxNo_1">
                       <rd:DefaultName>BoxNo_1</rd:DefaultName>
-                      <HideDuplicates>table1_Group1</HideDuplicates>
                       <Style>
                         <BorderStyle>
+                          <Default>Solid</Default>
                           <Left>Solid</Left>
                           <Right>Solid</Right>
-                          <Top>None</Top>
-                          <Bottom>=IIF(RowNumber("table1_Group1")=CountRows("table1_Group1"),"Solid","None")</Bottom>
+                          <Top>Solid</Top>
+                          <Bottom>Solid</Bottom>
                         </BorderStyle>
                         <FontFamily>宋体</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -148,13 +148,13 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
                   <ReportItems>
                     <Textbox Name="ContractNo">
                       <rd:DefaultName>ContractNo</rd:DefaultName>
-                      <HideDuplicates>table1_Group1</HideDuplicates>
                       <Style>
                         <BorderStyle>
+                          <Default>Solid</Default>
                           <Left>Solid</Left>
                           <Right>Solid</Right>
-                          <Top>None</Top>
-                          <Bottom>=IIF(RowNumber("table1_Group1")=CountRows("table1_Group1"),"Solid","None")</Bottom>
+                          <Top>Solid</Top>
+                          <Bottom>Solid</Bottom>
                         </BorderStyle>
                         <FontFamily>宋体</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -323,13 +323,13 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
                   <ReportItems>
                     <Textbox Name="BoxSpec">
                       <rd:DefaultName>BoxSpec</rd:DefaultName>
-                      <HideDuplicates>table1_Group1</HideDuplicates>
                       <Style>
                         <BorderStyle>
+                          <Default>Solid</Default>
                           <Left>Solid</Left>
                           <Right>Solid</Right>
-                          <Top>None</Top>
-                          <Bottom>=IIF(RowNumber("table1_Group1")=CountRows("table1_Group1"),"Solid","None")</Bottom>
+                          <Top>Solid</Top>
+                          <Bottom>Solid</Bottom>
                         </BorderStyle>
                         <FontFamily>宋体</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -453,31 +453,6 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
         </Style>
         <Header>
           <TableRows>
-            <TableRow>
-              <TableCells>
-                <TableCell>
-                  <ColSpan>13</ColSpan>
-                  <ReportItems>
-                    <Textbox Name="textbox28">
-                      <rd:DefaultName>textbox28</rd:DefaultName>
-                      <Style>
-                        <FontFamily>宋体</FontFamily>
-                        <FontSize>14pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <CanGrow>true</CanGrow>
-                      <Value>=cstr(year(First(Fields!BoxDate.Value)))+"年"+cstr(month(First(Fields!BoxDate.Value)))+"月"+cstr(day(First(Fields!BoxDate.Value)))+"日"+"钢丝绳任务单"</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-              </TableCells>
-              <Height>1cm</Height>
-            </TableRow>
             <TableRow>
               <TableCells>
                 <TableCell>
@@ -813,7 +788,7 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
             <Width>2.25cm</Width>
           </TableColumn>
         </TableColumns>
-        <Height>2.90476cm</Height>
+        <Height>1.90476cm</Height>
         <Footer>
           <TableRows>
             <TableRow>

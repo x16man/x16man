@@ -206,6 +206,8 @@ namespace Boxup
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: 这行代码将数据加载到表“BoxDataSet.DataTable2”中。您可以根据需要移动或移除它。
+            //this.DataTable2TableAdapter.Fill(this.BoxDataSet.DataTable2);
            
         }
 
@@ -215,11 +217,14 @@ namespace Boxup
             this.reportViewer1.LocalReport.SetParameters(new[] { new ReportParameter("BoxDate", boxDate.ToShortDateString()) });
             this.DataTable1TableAdapter.Fill(this.BoxDataSet.DataTable1, boxDate);
             this.reportViewer1.RefreshReport();
-            
+
+            this.DataTable2TableAdapter.Fill(this.BoxDataSet.DataTable2, boxDate);
 
             this.reportViewer2.LocalReport.SetParameters(new[] { new ReportParameter("BoxDate", boxDate.ToShortDateString()) });
-            this.DataTable2TableAdapter.Fill(this.BoxDataSet.DataTable2,boxDate);
             this.reportViewer2.RefreshReport();
+
+            this.reportViewer3.LocalReport.SetParameters(new[] { new ReportParameter("BoxDate", boxDate.ToShortDateString()) });
+            this.reportViewer3.RefreshReport();
         }
 
         private void button2_Click(object sender, EventArgs e)
