@@ -15,8 +15,10 @@ namespace Boxup.Entities
         public string OldItemName { get; set; }
 
         [Bindable(BindableSupport.Yes)]
-        public int d { get; set; }
+        public decimal d { get; set; }
 
+        [Bindable(BindableSupport.Yes)]
+        public int c { get; set; }
         #endregion
         public ItemInfo() { }
 

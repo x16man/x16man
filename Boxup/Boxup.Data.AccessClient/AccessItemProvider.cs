@@ -70,7 +70,8 @@ namespace Boxup.Data.AccessClient
         {
             var obj = new ItemInfo();
             obj.OldItemName = obj.ItemName = dr["ItemName"].ToString();
-            obj.d = dr["d"] == DBNull.Value ? 0 : int.Parse(dr["d"].ToString());
+            obj.d = dr["d"] == DBNull.Value ? 0 : decimal.Parse(dr["d"].ToString());
+            obj.c = dr["c"] == DBNull.Value ? 0 : int.Parse(dr["c"].ToString());
             return obj;
         }
 
@@ -87,11 +88,12 @@ namespace Boxup.Data.AccessClient
 
         public override bool Insert(ItemInfo obj ,TransactionManager trans)
         {
-            var sqlStatement = "Insert Into Item ([ItemName],[d]) Values (@ItemName,@d)";
+            var sqlStatement = "Insert Into Item ([ItemName],[d],[c]) Values (@ItemName,@d,@c)";
             var parms = new[]
                             {
                                 new OleDbParameter("@ItemName",OleDbType.VarWChar,50){Value = obj.ItemName},
-                                new OleDbParameter("@d",OleDbType.Integer){Value = obj.d==0?DBNull.Value:(object)obj.d},
+                                new OleDbParameter("@d",OleDbType.Decimal){Value = obj.d==0?DBNull.Value:(object)obj.d},
+                                new OleDbParameter("@c",OleDbType.Integer){Value = obj.c==0?DBNull.Value:(object)obj.c},
                             };
             
             try
@@ -112,11 +114,12 @@ namespace Boxup.Data.AccessClient
 
         public override bool Update(ItemInfo obj, TransactionManager trans)
         {
-            var sqlStatement = "Update Item Set ItemName = @ItemName,d=@d Where ItemName = @OldItemName";
+            var sqlStatement = "Update Item Set ItemName = @ItemName,d=@d,c=@c Where ItemName = @OldItemName";
             var parms = new[] { 
                 new OleDbParameter("@ItemName",OleDbType.VarWChar,50){Value = obj.ItemName},
                 new OleDbParameter("@OldItemName",OleDbType.VarWChar,50){Value = obj.OldItemName},
-                new OleDbParameter("@d",OleDbType.Integer){Value = obj.d ==0?DBNull.Value:(object)obj.d},
+                new OleDbParameter("@d",OleDbType.Decimal){Value = obj.d ==0?DBNull.Value:(object)obj.d},
+                new OleDbParameter("@c",OleDbType.Integer){Value = obj.c==0?DBNull.Value:(object)obj.c},
             };
             try
             {

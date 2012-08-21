@@ -9,7 +9,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BoxTableAdapter" GeneratorDataComponentClassName="BoxTableAdapter" Name="Box" UserDataComponentName="BoxTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BoxConnectionString (Settings)" DbObjectName="Box" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BoxConnectionString (Settings)" DbObjectName="Box" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Box` WHERE ((`Id` = ?) AND ((? = 1 AND `BoxDate` IS NULL) OR (`BoxDate` = ?)) AND ((? = 1 AND `BoxNo` IS NULL) OR (`BoxNo` = ?)) AND ((? = 1 AND `BoxName` IS NULL) OR (`BoxName` = ?)) AND ((? = 1 AND `BoxModel` IS NULL) OR (`BoxModel` = ?)) AND ((? = 1 AND `BoxSpec` IS NULL) OR (`BoxSpec` = ?)))</CommandText>
@@ -83,7 +83,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BoxContractTableAdapter" GeneratorDataComponentClassName="BoxContractTableAdapter" Name="BoxContract" UserDataComponentName="BoxContractTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BoxConnectionString (Settings)" DbObjectName="BoxContract" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BoxConnectionString (Settings)" DbObjectName="BoxContract" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `BoxContract` WHERE ((`Id` = ?) AND ((? = 1 AND `BoxDate` IS NULL) OR (`BoxDate` = ?)) AND ((? = 1 AND `BoxNo` IS NULL) OR (`BoxNo` = ?)) AND ((? = 1 AND `ContractNo` IS NULL) OR (`ContractNo` = ?)))</CommandText>
@@ -143,7 +143,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BoxItemTableAdapter" GeneratorDataComponentClassName="BoxItemTableAdapter" Name="BoxItem" UserDataComponentName="BoxItemTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BoxConnectionString (Settings)" DbObjectName="BoxItem" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BoxConnectionString (Settings)" DbObjectName="BoxItem" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `BoxItem` WHERE ((`Id` = ?) AND ((? = 1 AND `BoxDate` IS NULL) OR (`BoxDate` = ?)) AND ((? = 1 AND `BoxNo` IS NULL) OR (`BoxNo` = ?)) AND ((? = 1 AND `ItemName` IS NULL) OR (`ItemName` = ?)) AND ((? = 1 AND `ItemModel` IS NULL) OR (`ItemModel` = ?)) AND ((? = 1 AND `ItemNum` IS NULL) OR (`ItemNum` = ?)))</CommandText>
@@ -217,14 +217,17 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BoxConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BoxConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT Box.BoxName, Box.BoxModel, Box.BoxSpec, Box.BoxDate, BoxItem.BoxNo, 
       BoxItem.ItemName, BoxItem.ItemModel, BoxItem.ItemNum
-FROM (Box INNER JOIN
-      BoxItem ON Box.BoxDate = BoxItem.BoxDate AND Box.BoxNo = BoxItem.BoxNo)
-WHERE (Box.BoxDate = ?)
+FROM  Box ,  BoxItem ,Item
+Where Box.BoxDate = BoxItem.BoxDate AND 
+      Box.BoxNo = BoxItem.BoxNo AND
+      Box.BoxDate = ? AND
+      InStr(BoxItem.ItemModel,Item.ItemName)&gt;0 AND
+      Item.c=1
 Order By Box.BoxSpec,BoxItem.ItemModel</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="BoxDate" DataSourceName="Box" DataTypeServer="DbType.Date" DbType="Date" Direction="Input" ParameterName="BoxDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="BoxDate" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -247,21 +250,28 @@ Order By Box.BoxSpec,BoxItem.ItemModel</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable2TableAdapter" GeneratorDataComponentClassName="DataTable2TableAdapter" Name="DataTable2" UserDataComponentName="DataTable2TableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BoxConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BoxConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT BoxContract.ContractNo, BoxItem.BoxNo, BoxItem.ItemName, BoxItem.ItemModel,Left(BoxItem.ItemModel,Instr(BoxItem.ItemModel,'L')-1) as Model,Right(BoxItem.ItemModel,Len(BoxItem.ItemModel)-Instr(BoxItem.ItemModel,'L')) as Length,
-      BoxItem.ItemNum, BoxContract.BoxDate,Box.BoxSpec,Box.BoxModel,Item.d
-FROM BoxContract ,BoxItem, Box, Item
-Where  BoxContract.BoxDate = BoxItem.BoxDate AND
-       BoxContract.BoxDate = Box.BoxDate And 
-      BoxContract.BoxNo = BoxItem.BoxNo And
-      BoxContract.BoxNo = Box.BoxNo And
-     BoxContract.BoxDate = ? And
-      Left(BoxItem.ItemModel,Instr(BoxItem.ItemModel,'L')-1)=Item.ItemName
-Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
+                    <CommandText>Select BoxContract.ContractNo,BoxContract.BoxNo,A.ItemName,A.ItemModel,A.Model,A.Length,A.ItemNum,A.d,A.BoxDate,Box.BoxSpec,Box.BoxModel
+From ((BoxContract Left Outer Join
+       (Select BoxItem.BoxNo,BoxItem.ItemName,BoxItem.ItemModel,
+               IIF(IsNull(BoxItem.ItemModel),null,Left(BoxItem.ItemModel,Instr(BoxItem.ItemModel,'L')-1)) as Model,
+               IIF(IsNULL(BoxItem.ItemModel),null,Right(BoxItem.ItemModel,Len(BoxItem.ItemModel)-Instr(BoxItem.ItemModel,'L'))) as Length,
+               BoxItem.ItemNum,Item.d,BoxItem.BoxDate
+        From BoxItem Inner Join Item
+        ON Instr(BoxItem.ItemModel,Item.ItemName)&gt;0
+        Where Item.C=1) As A
+On BoxContract.BoxNo = A.BoxNo And
+   BoxContract.BoxDate = A.BoxDate)
+Left Outer Join Box
+On BoxContract.BoxNo = Box.BoxNo And
+   BoxContract.BoxDate = Box.BoxDate)
+Where BoxContract.BoxDate = ?
+Order By Box.BoxNo ASC,BoxContract.ContractNo ASC,A.ItemNum DESC
+</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="BoxDate" DataSourceName="BoxContract" DataTypeServer="DbType.Date" DbType="Date" Direction="Input" ParameterName="BoxDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="BoxDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="BoxDate" DataSourceName="BoxContract" DataTypeServer="DbType.Date" DbType="Date" Direction="Input" ParameterName="BoxDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="BoxDate" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </SelectCommand>
@@ -278,7 +288,67 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
               <Mapping SourceColumn="Length" DataSetColumn="Length" />
               <Mapping SourceColumn="BoxSpec" DataSetColumn="BoxSpec" />
               <Mapping SourceColumn="BoxModel" DataSetColumn="BoxModel" />
-              <Mapping SourceColumn="d" DataSetColumn="d" />
+              <Mapping SourceColumn="d" DataSetColumn="d1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable3TableAdapter" GeneratorDataComponentClassName="DataTable3TableAdapter" Name="DataTable3" UserDataComponentName="DataTable3TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BoxConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select BoxItem.ItemName,BoxItem.ItemModel,
+               Item.ItemName as Model,
+               IIF(Instr(BoxItem.ItemName,'~')&gt;0,
+                   Right(BoxItem.ItemName,Len(BoxItem.ItemName)-InStr(BoxItem.ItemName,'A')),
+                   IIF(IsNULL(BoxItem.ItemModel),
+                       null,
+                       Right(BoxItem.ItemModel,Len(BoxItem.ItemModel)-Instr(5,BoxItem.ItemModel,'A'))
+                      )
+                  ) as Length,
+               BoxItem.ItemNum,BoxItem.BoxNo,BoxItem.BoxDate
+        From BoxItem Inner Join Item
+        ON Instr(BoxItem.ItemModel,Item.ItemName)&gt;0
+        Where Item.c=2 And BoxItem.BoxDate=?
+order By BoxItem.ItemName,BoxItem.ItemModel,BoxItem.ItemNum,BoxITem.BoxNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="BoxDate" DataSourceName="" DataTypeServer="DbType.Date" DbType="Date" Direction="Input" ParameterName="BoxDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="BoxDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="BoxNo" DataSetColumn="BoxNo" />
+              <Mapping SourceColumn="ItemName" DataSetColumn="ItemName" />
+              <Mapping SourceColumn="ItemModel" DataSetColumn="ItemModel" />
+              <Mapping SourceColumn="Model" DataSetColumn="Model" />
+              <Mapping SourceColumn="Length" DataSetColumn="Length" />
+              <Mapping SourceColumn="ItemNum" DataSetColumn="ItemNum" />
+              <Mapping SourceColumn="BoxDate" DataSetColumn="BoxDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable4TableAdapter" GeneratorDataComponentClassName="DataTable4TableAdapter" Name="DataTable4" UserDataComponentName="DataTable4TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BoxConnectionString (Settings)" DbObjectName="BoxItem" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select ItemName,ItemModel,Sum(ItemNum) as ItemNum1 ,BoxDate 
+From boxitem where boxdate=?
+Group By ItemName,ItemModel,BoxDate</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="BoxDate" DataSourceName="BoxItem" DataTypeServer="DbType.Date" DbType="Date" Direction="Input" ParameterName="BoxDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="BoxDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ItemName" DataSetColumn="ItemName" />
+              <Mapping SourceColumn="ItemModel" DataSetColumn="ItemModel" />
+              <Mapping SourceColumn="ItemNum1" DataSetColumn="ItemNum1" />
+              <Mapping SourceColumn="BoxDate" DataSetColumn="BoxDate" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -287,30 +357,30 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="BoxDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BoxDataSet" msprop:Generator_UserDSName="BoxDataSet">
+  <xs:element name="BoxDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="BoxDataSet" msprop:Generator_DataSetName="BoxDataSet" msprop:EnableTableAdapterManager="True">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Box" msprop:Generator_UserTableName="Box" msprop:Generator_RowEvArgName="BoxRowChangeEvent" msprop:Generator_TableVarName="tableBox" msprop:Generator_TablePropName="Box" msprop:Generator_RowDeletingName="BoxRowDeleting" msprop:Generator_RowChangingName="BoxRowChanging" msprop:Generator_RowDeletedName="BoxRowDeleted" msprop:Generator_TableClassName="BoxDataTable" msprop:Generator_RowChangedName="BoxRowChanged" msprop:Generator_RowEvHandlerName="BoxRowChangeEventHandler" msprop:Generator_RowClassName="BoxRow">
+        <xs:element name="Box" msprop:Generator_UserTableName="Box" msprop:Generator_RowDeletedName="BoxRowDeleted" msprop:Generator_RowChangedName="BoxRowChanged" msprop:Generator_RowClassName="BoxRow" msprop:Generator_RowChangingName="BoxRowChanging" msprop:Generator_RowEvArgName="BoxRowChangeEvent" msprop:Generator_RowEvHandlerName="BoxRowChangeEventHandler" msprop:Generator_TableClassName="BoxDataTable" msprop:Generator_TableVarName="tableBox" msprop:Generator_RowDeletingName="BoxRowDeleting" msprop:Generator_TablePropName="Box">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
-              <xs:element name="BoxDate" msprop:Generator_ColumnVarNameInTable="columnBoxDate" msprop:Generator_ColumnPropNameInRow="BoxDate" msprop:Generator_ColumnPropNameInTable="BoxDateColumn" msprop:Generator_UserColumnName="BoxDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="BoxNo" msprop:Generator_ColumnVarNameInTable="columnBoxNo" msprop:Generator_ColumnPropNameInRow="BoxNo" msprop:Generator_ColumnPropNameInTable="BoxNoColumn" msprop:Generator_UserColumnName="BoxNo" type="xs:short" minOccurs="0" />
-              <xs:element name="BoxName" msprop:Generator_ColumnVarNameInTable="columnBoxName" msprop:Generator_ColumnPropNameInRow="BoxName" msprop:Generator_ColumnPropNameInTable="BoxNameColumn" msprop:Generator_UserColumnName="BoxName" minOccurs="0">
+              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="BoxDate" msprop:Generator_UserColumnName="BoxDate" msprop:Generator_ColumnVarNameInTable="columnBoxDate" msprop:Generator_ColumnPropNameInRow="BoxDate" msprop:Generator_ColumnPropNameInTable="BoxDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BoxNo" msprop:Generator_UserColumnName="BoxNo" msprop:Generator_ColumnVarNameInTable="columnBoxNo" msprop:Generator_ColumnPropNameInRow="BoxNo" msprop:Generator_ColumnPropNameInTable="BoxNoColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="BoxName" msprop:Generator_UserColumnName="BoxName" msprop:Generator_ColumnVarNameInTable="columnBoxName" msprop:Generator_ColumnPropNameInRow="BoxName" msprop:Generator_ColumnPropNameInTable="BoxNameColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="BoxModel" msprop:Generator_ColumnVarNameInTable="columnBoxModel" msprop:Generator_ColumnPropNameInRow="BoxModel" msprop:Generator_ColumnPropNameInTable="BoxModelColumn" msprop:Generator_UserColumnName="BoxModel" minOccurs="0">
+              <xs:element name="BoxModel" msprop:Generator_UserColumnName="BoxModel" msprop:Generator_ColumnVarNameInTable="columnBoxModel" msprop:Generator_ColumnPropNameInRow="BoxModel" msprop:Generator_ColumnPropNameInTable="BoxModelColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="BoxSpec" msprop:Generator_ColumnVarNameInTable="columnBoxSpec" msprop:Generator_ColumnPropNameInRow="BoxSpec" msprop:Generator_ColumnPropNameInTable="BoxSpecColumn" msprop:Generator_UserColumnName="BoxSpec" minOccurs="0">
+              <xs:element name="BoxSpec" msprop:Generator_UserColumnName="BoxSpec" msprop:Generator_ColumnVarNameInTable="columnBoxSpec" msprop:Generator_ColumnPropNameInRow="BoxSpec" msprop:Generator_ColumnPropNameInTable="BoxSpecColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -320,13 +390,13 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="BoxContract" msprop:Generator_UserTableName="BoxContract" msprop:Generator_RowEvArgName="BoxContractRowChangeEvent" msprop:Generator_TableVarName="tableBoxContract" msprop:Generator_TablePropName="BoxContract" msprop:Generator_RowDeletingName="BoxContractRowDeleting" msprop:Generator_RowChangingName="BoxContractRowChanging" msprop:Generator_RowDeletedName="BoxContractRowDeleted" msprop:Generator_TableClassName="BoxContractDataTable" msprop:Generator_RowChangedName="BoxContractRowChanged" msprop:Generator_RowEvHandlerName="BoxContractRowChangeEventHandler" msprop:Generator_RowClassName="BoxContractRow">
+        <xs:element name="BoxContract" msprop:Generator_UserTableName="BoxContract" msprop:Generator_RowDeletedName="BoxContractRowDeleted" msprop:Generator_RowChangedName="BoxContractRowChanged" msprop:Generator_RowClassName="BoxContractRow" msprop:Generator_RowChangingName="BoxContractRowChanging" msprop:Generator_RowEvArgName="BoxContractRowChangeEvent" msprop:Generator_RowEvHandlerName="BoxContractRowChangeEventHandler" msprop:Generator_TableClassName="BoxContractDataTable" msprop:Generator_TableVarName="tableBoxContract" msprop:Generator_RowDeletingName="BoxContractRowDeleting" msprop:Generator_TablePropName="BoxContract">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
-              <xs:element name="BoxDate" msprop:Generator_ColumnVarNameInTable="columnBoxDate" msprop:Generator_ColumnPropNameInRow="BoxDate" msprop:Generator_ColumnPropNameInTable="BoxDateColumn" msprop:Generator_UserColumnName="BoxDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="BoxNo" msprop:Generator_ColumnVarNameInTable="columnBoxNo" msprop:Generator_ColumnPropNameInRow="BoxNo" msprop:Generator_ColumnPropNameInTable="BoxNoColumn" msprop:Generator_UserColumnName="BoxNo" type="xs:short" minOccurs="0" />
-              <xs:element name="ContractNo" msprop:Generator_ColumnVarNameInTable="columnContractNo" msprop:Generator_ColumnPropNameInRow="ContractNo" msprop:Generator_ColumnPropNameInTable="ContractNoColumn" msprop:Generator_UserColumnName="ContractNo" minOccurs="0">
+              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="BoxDate" msprop:Generator_UserColumnName="BoxDate" msprop:Generator_ColumnVarNameInTable="columnBoxDate" msprop:Generator_ColumnPropNameInRow="BoxDate" msprop:Generator_ColumnPropNameInTable="BoxDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BoxNo" msprop:Generator_UserColumnName="BoxNo" msprop:Generator_ColumnVarNameInTable="columnBoxNo" msprop:Generator_ColumnPropNameInRow="BoxNo" msprop:Generator_ColumnPropNameInTable="BoxNoColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="ContractNo" msprop:Generator_UserColumnName="ContractNo" msprop:Generator_ColumnVarNameInTable="columnContractNo" msprop:Generator_ColumnPropNameInRow="ContractNo" msprop:Generator_ColumnPropNameInTable="ContractNoColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -336,130 +406,190 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="BoxItem" msprop:Generator_UserTableName="BoxItem" msprop:Generator_RowEvArgName="BoxItemRowChangeEvent" msprop:Generator_TableVarName="tableBoxItem" msprop:Generator_TablePropName="BoxItem" msprop:Generator_RowDeletingName="BoxItemRowDeleting" msprop:Generator_RowChangingName="BoxItemRowChanging" msprop:Generator_RowDeletedName="BoxItemRowDeleted" msprop:Generator_TableClassName="BoxItemDataTable" msprop:Generator_RowChangedName="BoxItemRowChanged" msprop:Generator_RowEvHandlerName="BoxItemRowChangeEventHandler" msprop:Generator_RowClassName="BoxItemRow">
+        <xs:element name="BoxItem" msprop:Generator_UserTableName="BoxItem" msprop:Generator_RowDeletedName="BoxItemRowDeleted" msprop:Generator_RowChangedName="BoxItemRowChanged" msprop:Generator_RowClassName="BoxItemRow" msprop:Generator_RowChangingName="BoxItemRowChanging" msprop:Generator_RowEvArgName="BoxItemRowChangeEvent" msprop:Generator_RowEvHandlerName="BoxItemRowChangeEventHandler" msprop:Generator_TableClassName="BoxItemDataTable" msprop:Generator_TableVarName="tableBoxItem" msprop:Generator_RowDeletingName="BoxItemRowDeleting" msprop:Generator_TablePropName="BoxItem">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
-              <xs:element name="BoxDate" msprop:Generator_ColumnVarNameInTable="columnBoxDate" msprop:Generator_ColumnPropNameInRow="BoxDate" msprop:Generator_ColumnPropNameInTable="BoxDateColumn" msprop:Generator_UserColumnName="BoxDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="BoxNo" msprop:Generator_ColumnVarNameInTable="columnBoxNo" msprop:Generator_ColumnPropNameInRow="BoxNo" msprop:Generator_ColumnPropNameInTable="BoxNoColumn" msprop:Generator_UserColumnName="BoxNo" type="xs:short" minOccurs="0" />
-              <xs:element name="ItemName" msprop:Generator_ColumnVarNameInTable="columnItemName" msprop:Generator_ColumnPropNameInRow="ItemName" msprop:Generator_ColumnPropNameInTable="ItemNameColumn" msprop:Generator_UserColumnName="ItemName" minOccurs="0">
+              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="BoxDate" msprop:Generator_UserColumnName="BoxDate" msprop:Generator_ColumnVarNameInTable="columnBoxDate" msprop:Generator_ColumnPropNameInRow="BoxDate" msprop:Generator_ColumnPropNameInTable="BoxDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BoxNo" msprop:Generator_UserColumnName="BoxNo" msprop:Generator_ColumnVarNameInTable="columnBoxNo" msprop:Generator_ColumnPropNameInRow="BoxNo" msprop:Generator_ColumnPropNameInTable="BoxNoColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="ItemName" msprop:Generator_UserColumnName="ItemName" msprop:Generator_ColumnVarNameInTable="columnItemName" msprop:Generator_ColumnPropNameInRow="ItemName" msprop:Generator_ColumnPropNameInTable="ItemNameColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ItemModel" msprop:Generator_ColumnVarNameInTable="columnItemModel" msprop:Generator_ColumnPropNameInRow="ItemModel" msprop:Generator_ColumnPropNameInTable="ItemModelColumn" msprop:Generator_UserColumnName="ItemModel" minOccurs="0">
+              <xs:element name="ItemModel" msprop:Generator_UserColumnName="ItemModel" msprop:Generator_ColumnVarNameInTable="columnItemModel" msprop:Generator_ColumnPropNameInRow="ItemModel" msprop:Generator_ColumnPropNameInTable="ItemModelColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ItemNum" msprop:Generator_ColumnVarNameInTable="columnItemNum" msprop:Generator_ColumnPropNameInRow="ItemNum" msprop:Generator_ColumnPropNameInTable="ItemNumColumn" msprop:Generator_UserColumnName="ItemNum" type="xs:short" minOccurs="0" />
+              <xs:element name="ItemNum" msprop:Generator_UserColumnName="ItemNum" msprop:Generator_ColumnVarNameInTable="columnItemNum" msprop:Generator_ColumnPropNameInRow="ItemNum" msprop:Generator_ColumnPropNameInTable="ItemNumColumn" type="xs:short" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowClassName="DataTable1Row">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_TablePropName="DataTable1">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="BoxName" msprop:Generator_ColumnVarNameInTable="columnBoxName" msprop:Generator_ColumnPropNameInRow="BoxName" msprop:Generator_ColumnPropNameInTable="BoxNameColumn" msprop:Generator_UserColumnName="BoxName" minOccurs="0">
+              <xs:element name="BoxName" msprop:Generator_UserColumnName="BoxName" msprop:Generator_ColumnVarNameInTable="columnBoxName" msprop:Generator_ColumnPropNameInRow="BoxName" msprop:Generator_ColumnPropNameInTable="BoxNameColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="BoxModel" msprop:Generator_ColumnVarNameInTable="columnBoxModel" msprop:Generator_ColumnPropNameInRow="BoxModel" msprop:Generator_ColumnPropNameInTable="BoxModelColumn" msprop:Generator_UserColumnName="BoxModel" minOccurs="0">
+              <xs:element name="BoxModel" msprop:Generator_UserColumnName="BoxModel" msprop:Generator_ColumnVarNameInTable="columnBoxModel" msprop:Generator_ColumnPropNameInRow="BoxModel" msprop:Generator_ColumnPropNameInTable="BoxModelColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="BoxSpec" msprop:Generator_ColumnVarNameInTable="columnBoxSpec" msprop:Generator_ColumnPropNameInRow="BoxSpec" msprop:Generator_ColumnPropNameInTable="BoxSpecColumn" msprop:Generator_UserColumnName="BoxSpec" minOccurs="0">
+              <xs:element name="BoxSpec" msprop:Generator_UserColumnName="BoxSpec" msprop:Generator_ColumnVarNameInTable="columnBoxSpec" msprop:Generator_ColumnPropNameInRow="BoxSpec" msprop:Generator_ColumnPropNameInTable="BoxSpecColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="BoxDate" msprop:Generator_ColumnVarNameInTable="columnBoxDate" msprop:Generator_ColumnPropNameInRow="BoxDate" msprop:Generator_ColumnPropNameInTable="BoxDateColumn" msprop:Generator_UserColumnName="BoxDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="BoxNo" msprop:Generator_ColumnVarNameInTable="columnBoxNo" msprop:Generator_ColumnPropNameInRow="BoxNo" msprop:Generator_ColumnPropNameInTable="BoxNoColumn" msprop:Generator_UserColumnName="BoxNo" type="xs:short" minOccurs="0" />
-              <xs:element name="ItemName" msprop:Generator_ColumnVarNameInTable="columnItemName" msprop:Generator_ColumnPropNameInRow="ItemName" msprop:Generator_ColumnPropNameInTable="ItemNameColumn" msprop:Generator_UserColumnName="ItemName" minOccurs="0">
+              <xs:element name="BoxDate" msprop:Generator_UserColumnName="BoxDate" msprop:Generator_ColumnVarNameInTable="columnBoxDate" msprop:Generator_ColumnPropNameInRow="BoxDate" msprop:Generator_ColumnPropNameInTable="BoxDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BoxNo" msprop:Generator_UserColumnName="BoxNo" msprop:Generator_ColumnVarNameInTable="columnBoxNo" msprop:Generator_ColumnPropNameInRow="BoxNo" msprop:Generator_ColumnPropNameInTable="BoxNoColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="ItemName" msprop:Generator_UserColumnName="ItemName" msprop:Generator_ColumnVarNameInTable="columnItemName" msprop:Generator_ColumnPropNameInRow="ItemName" msprop:Generator_ColumnPropNameInTable="ItemNameColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ItemModel" msprop:Generator_ColumnVarNameInTable="columnItemModel" msprop:Generator_ColumnPropNameInRow="ItemModel" msprop:Generator_ColumnPropNameInTable="ItemModelColumn" msprop:Generator_UserColumnName="ItemModel" minOccurs="0">
+              <xs:element name="ItemModel" msprop:Generator_UserColumnName="ItemModel" msprop:Generator_ColumnVarNameInTable="columnItemModel" msprop:Generator_ColumnPropNameInRow="ItemModel" msprop:Generator_ColumnPropNameInTable="ItemModelColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ItemNum" msprop:Generator_ColumnVarNameInTable="columnItemNum" msprop:Generator_ColumnPropNameInRow="ItemNum" msprop:Generator_ColumnPropNameInTable="ItemNumColumn" msprop:Generator_UserColumnName="ItemNum" type="xs:short" minOccurs="0" />
+              <xs:element name="ItemNum" msprop:Generator_UserColumnName="ItemNum" msprop:Generator_ColumnVarNameInTable="columnItemNum" msprop:Generator_ColumnPropNameInRow="ItemNum" msprop:Generator_ColumnPropNameInTable="ItemNumColumn" type="xs:short" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTable2" msprop:Generator_UserTableName="DataTable2" msprop:Generator_RowEvArgName="DataTable2RowChangeEvent" msprop:Generator_TableVarName="tableDataTable2" msprop:Generator_TablePropName="DataTable2" msprop:Generator_RowDeletingName="DataTable2RowDeleting" msprop:Generator_RowChangingName="DataTable2RowChanging" msprop:Generator_RowDeletedName="DataTable2RowDeleted" msprop:Generator_TableClassName="DataTable2DataTable" msprop:Generator_RowChangedName="DataTable2RowChanged" msprop:Generator_RowEvHandlerName="DataTable2RowChangeEventHandler" msprop:Generator_RowClassName="DataTable2Row">
+        <xs:element name="DataTable2" msprop:Generator_UserTableName="DataTable2" msprop:Generator_RowDeletedName="DataTable2RowDeleted" msprop:Generator_RowChangedName="DataTable2RowChanged" msprop:Generator_RowClassName="DataTable2Row" msprop:Generator_RowChangingName="DataTable2RowChanging" msprop:Generator_RowEvArgName="DataTable2RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable2RowChangeEventHandler" msprop:Generator_TableClassName="DataTable2DataTable" msprop:Generator_TableVarName="tableDataTable2" msprop:Generator_RowDeletingName="DataTable2RowDeleting" msprop:Generator_TablePropName="DataTable2">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ContractNo" msprop:Generator_ColumnVarNameInTable="columnContractNo" msprop:Generator_ColumnPropNameInRow="ContractNo" msprop:Generator_ColumnPropNameInTable="ContractNoColumn" msprop:Generator_UserColumnName="ContractNo" minOccurs="0">
+              <xs:element name="ContractNo" msprop:Generator_UserColumnName="ContractNo" msprop:Generator_ColumnVarNameInTable="columnContractNo" msprop:Generator_ColumnPropNameInRow="ContractNo" msprop:Generator_ColumnPropNameInTable="ContractNoColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="BoxNo" msprop:Generator_ColumnVarNameInTable="columnBoxNo" msprop:Generator_ColumnPropNameInRow="BoxNo" msprop:Generator_ColumnPropNameInTable="BoxNoColumn" msprop:Generator_UserColumnName="BoxNo" type="xs:short" minOccurs="0" />
-              <xs:element name="ItemName" msprop:Generator_ColumnVarNameInTable="columnItemName" msprop:Generator_ColumnPropNameInRow="ItemName" msprop:Generator_ColumnPropNameInTable="ItemNameColumn" msprop:Generator_UserColumnName="ItemName" minOccurs="0">
+              <xs:element name="BoxNo" msprop:Generator_UserColumnName="BoxNo" msprop:Generator_ColumnVarNameInTable="columnBoxNo" msprop:Generator_ColumnPropNameInRow="BoxNo" msprop:Generator_ColumnPropNameInTable="BoxNoColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="ItemName" msprop:Generator_UserColumnName="ItemName" msprop:Generator_ColumnVarNameInTable="columnItemName" msprop:Generator_ColumnPropNameInRow="ItemName" msprop:Generator_ColumnPropNameInTable="ItemNameColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ItemModel" msprop:Generator_ColumnVarNameInTable="columnItemModel" msprop:Generator_ColumnPropNameInRow="ItemModel" msprop:Generator_ColumnPropNameInTable="ItemModelColumn" msprop:Generator_UserColumnName="ItemModel" minOccurs="0">
+              <xs:element name="ItemModel" msprop:Generator_UserColumnName="ItemModel" msprop:Generator_ColumnVarNameInTable="columnItemModel" msprop:Generator_ColumnPropNameInRow="ItemModel" msprop:Generator_ColumnPropNameInTable="ItemModelColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ItemNum" msprop:Generator_ColumnVarNameInTable="columnItemNum" msprop:Generator_ColumnPropNameInRow="ItemNum" msprop:Generator_ColumnPropNameInTable="ItemNumColumn" msprop:Generator_UserColumnName="ItemNum" type="xs:short" minOccurs="0" />
-              <xs:element name="BoxDate" msprop:Generator_ColumnVarNameInTable="columnBoxDate" msprop:Generator_ColumnPropNameInRow="BoxDate" msprop:Generator_ColumnPropNameInTable="BoxDateColumn" msprop:Generator_UserColumnName="BoxDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Model" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnModel" msprop:Generator_ColumnPropNameInRow="Model" msprop:Generator_ColumnPropNameInTable="ModelColumn" msprop:Generator_UserColumnName="Model" minOccurs="0">
+              <xs:element name="ItemNum" msprop:Generator_UserColumnName="ItemNum" msprop:Generator_ColumnVarNameInTable="columnItemNum" msprop:Generator_ColumnPropNameInRow="ItemNum" msprop:Generator_ColumnPropNameInTable="ItemNumColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="BoxDate" msprop:Generator_UserColumnName="BoxDate" msprop:Generator_ColumnVarNameInTable="columnBoxDate" msprop:Generator_ColumnPropNameInRow="BoxDate" msprop:Generator_ColumnPropNameInTable="BoxDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Model" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Model" msprop:Generator_ColumnVarNameInTable="columnModel" msprop:Generator_ColumnPropNameInRow="Model" msprop:Generator_ColumnPropNameInTable="ModelColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Length" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLength" msprop:Generator_ColumnPropNameInRow="Length" msprop:Generator_ColumnPropNameInTable="LengthColumn" msprop:Generator_UserColumnName="Length" minOccurs="0">
+              <xs:element name="Length" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Length" msprop:Generator_ColumnVarNameInTable="columnLength" msprop:Generator_ColumnPropNameInRow="Length" msprop:Generator_ColumnPropNameInTable="LengthColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="BoxSpec" msprop:Generator_ColumnVarNameInTable="columnBoxSpec" msprop:Generator_ColumnPropNameInRow="BoxSpec" msprop:Generator_ColumnPropNameInTable="BoxSpecColumn" msprop:Generator_UserColumnName="BoxSpec" minOccurs="0">
+              <xs:element name="BoxSpec" msprop:Generator_UserColumnName="BoxSpec" msprop:Generator_ColumnVarNameInTable="columnBoxSpec" msprop:Generator_ColumnPropNameInRow="BoxSpec" msprop:Generator_ColumnPropNameInTable="BoxSpecColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="BoxModel" msprop:Generator_ColumnVarNameInTable="columnBoxModel" msprop:Generator_ColumnPropNameInRow="BoxModel" msprop:Generator_ColumnPropNameInTable="BoxModelColumn" msprop:Generator_UserColumnName="BoxModel" minOccurs="0">
+              <xs:element name="BoxModel" msprop:Generator_UserColumnName="BoxModel" msprop:Generator_ColumnVarNameInTable="columnBoxModel" msprop:Generator_ColumnPropNameInRow="BoxModel" msprop:Generator_ColumnPropNameInTable="BoxModelColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="d" msprop:Generator_ColumnVarNameInTable="columnd" msprop:Generator_ColumnPropNameInRow="d" msprop:Generator_ColumnPropNameInTable="dColumn" msprop:Generator_UserColumnName="d" type="xs:short" minOccurs="0" />
+              <xs:element name="d" msprop:Generator_UserColumnName="d" msprop:Generator_ColumnVarNameInTable="columnd" msprop:Generator_ColumnPropNameInRow="d" msprop:Generator_ColumnPropNameInTable="dColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="d1" msdata:Caption="d" msprop:Generator_UserColumnName="d1" msprop:Generator_ColumnVarNameInTable="columnd1" msprop:Generator_ColumnPropNameInRow="d1" msprop:Generator_ColumnPropNameInTable="d1Column" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable3" msprop:Generator_UserTableName="DataTable3" msprop:Generator_RowDeletedName="DataTable3RowDeleted" msprop:Generator_RowChangedName="DataTable3RowChanged" msprop:Generator_RowClassName="DataTable3Row" msprop:Generator_RowChangingName="DataTable3RowChanging" msprop:Generator_RowEvArgName="DataTable3RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable3RowChangeEventHandler" msprop:Generator_TableClassName="DataTable3DataTable" msprop:Generator_TableVarName="tableDataTable3" msprop:Generator_RowDeletingName="DataTable3RowDeleting" msprop:Generator_TablePropName="DataTable3">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BoxNo" msprop:Generator_UserColumnName="BoxNo" msprop:Generator_ColumnVarNameInTable="columnBoxNo" msprop:Generator_ColumnPropNameInRow="BoxNo" msprop:Generator_ColumnPropNameInTable="BoxNoColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="ItemName" msprop:Generator_UserColumnName="ItemName" msprop:Generator_ColumnVarNameInTable="columnItemName" msprop:Generator_ColumnPropNameInRow="ItemName" msprop:Generator_ColumnPropNameInTable="ItemNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemModel" msprop:Generator_UserColumnName="ItemModel" msprop:Generator_ColumnVarNameInTable="columnItemModel" msprop:Generator_ColumnPropNameInRow="ItemModel" msprop:Generator_ColumnPropNameInTable="ItemModelColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Model" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Model" msprop:Generator_ColumnVarNameInTable="columnModel" msprop:Generator_ColumnPropNameInRow="Model" msprop:Generator_ColumnPropNameInTable="ModelColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Length" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Length" msprop:Generator_ColumnVarNameInTable="columnLength" msprop:Generator_ColumnPropNameInRow="Length" msprop:Generator_ColumnPropNameInTable="LengthColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemNum" msprop:Generator_UserColumnName="ItemNum" msprop:Generator_ColumnVarNameInTable="columnItemNum" msprop:Generator_ColumnPropNameInRow="ItemNum" msprop:Generator_ColumnPropNameInTable="ItemNumColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="BoxDate" msprop:Generator_UserColumnName="BoxDate" msprop:Generator_ColumnVarNameInTable="columnBoxDate" msprop:Generator_ColumnPropNameInRow="BoxDate" msprop:Generator_ColumnPropNameInTable="BoxDateColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable4" msprop:Generator_UserTableName="DataTable4" msprop:Generator_RowDeletedName="DataTable4RowDeleted" msprop:Generator_RowChangedName="DataTable4RowChanged" msprop:Generator_RowClassName="DataTable4Row" msprop:Generator_RowChangingName="DataTable4RowChanging" msprop:Generator_RowEvArgName="DataTable4RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable4RowChangeEventHandler" msprop:Generator_TableClassName="DataTable4DataTable" msprop:Generator_TableVarName="tableDataTable4" msprop:Generator_RowDeletingName="DataTable4RowDeleting" msprop:Generator_TablePropName="DataTable4">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemName" msprop:Generator_UserColumnName="ItemName" msprop:Generator_ColumnVarNameInTable="columnItemName" msprop:Generator_ColumnPropNameInRow="ItemName" msprop:Generator_ColumnPropNameInTable="ItemNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemModel" msprop:Generator_UserColumnName="ItemModel" msprop:Generator_ColumnVarNameInTable="columnItemModel" msprop:Generator_ColumnPropNameInRow="ItemModel" msprop:Generator_ColumnPropNameInTable="ItemModelColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemNum1" msprop:Generator_UserColumnName="ItemNum1" msprop:Generator_ColumnVarNameInTable="columnItemNum1" msprop:Generator_ColumnPropNameInRow="ItemNum1" msprop:Generator_ColumnPropNameInTable="ItemNum1Column" type="xs:double" minOccurs="0" />
+              <xs:element name="BoxDate" msprop:Generator_UserColumnName="BoxDate" msprop:Generator_ColumnVarNameInTable="columnBoxDate" msprop:Generator_ColumnPropNameInRow="BoxDate" msprop:Generator_ColumnPropNameInTable="BoxDateColumn" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

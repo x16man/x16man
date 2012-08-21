@@ -32,9 +32,12 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BoxDataSet = new Boxup.BoxDataSet();
             this.DataTable2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataTable3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -50,19 +53,30 @@
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataTable1TableAdapter = new Boxup.BoxDataSetTableAdapters.DataTable1TableAdapter();
-            this.DataTable2TableAdapter = new Boxup.BoxDataSetTableAdapters.DataTable2TableAdapter();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.reportViewer4 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.DataTable1TableAdapter = new Boxup.BoxDataSetTableAdapters.DataTable1TableAdapter();
+            this.DataTable2TableAdapter = new Boxup.BoxDataSetTableAdapters.DataTable2TableAdapter();
+            this.DataTable3TableAdapter = new Boxup.BoxDataSetTableAdapters.DataTable3TableAdapter();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.reportViewer5 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.DataTable4BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataTable4TableAdapter = new Boxup.BoxDataSetTableAdapters.DataTable4TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BoxDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable3BindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable4BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // DataTable1BindingSource
@@ -79,6 +93,11 @@
             // 
             this.DataTable2BindingSource.DataMember = "DataTable2";
             this.DataTable2BindingSource.DataSource = this.BoxDataSet;
+            // 
+            // DataTable3BindingSource
+            // 
+            this.DataTable3BindingSource.DataMember = "DataTable3";
+            this.DataTable3BindingSource.DataSource = this.BoxDataSet;
             // 
             // openFileDialog1
             // 
@@ -175,6 +194,8 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -228,14 +249,6 @@
             this.reportViewer2.Size = new System.Drawing.Size(886, 296);
             this.reportViewer2.TabIndex = 0;
             // 
-            // DataTable1TableAdapter
-            // 
-            this.DataTable1TableAdapter.ClearBeforeFill = true;
-            // 
-            // DataTable2TableAdapter
-            // 
-            this.DataTable2TableAdapter.ClearBeforeFill = true;
-            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.reportViewer3);
@@ -259,6 +272,73 @@
             this.reportViewer3.Size = new System.Drawing.Size(886, 296);
             this.reportViewer3.TabIndex = 1;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.reportViewer4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(892, 302);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "补偿链";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // reportViewer4
+            // 
+            this.reportViewer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource4.Name = "BoxDataSet_DataTable3";
+            reportDataSource4.Value = this.DataTable3BindingSource;
+            this.reportViewer4.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer4.LocalReport.ReportEmbeddedResource = "Boxup.Reports.BCLTask.rdlc";
+            this.reportViewer4.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer4.Name = "reportViewer4";
+            this.reportViewer4.Size = new System.Drawing.Size(886, 296);
+            this.reportViewer4.TabIndex = 0;
+            // 
+            // DataTable1TableAdapter
+            // 
+            this.DataTable1TableAdapter.ClearBeforeFill = true;
+            // 
+            // DataTable2TableAdapter
+            // 
+            this.DataTable2TableAdapter.ClearBeforeFill = true;
+            // 
+            // DataTable3TableAdapter
+            // 
+            this.DataTable3TableAdapter.ClearBeforeFill = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.reportViewer5);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(892, 302);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "物料汇总表";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // reportViewer5
+            // 
+            this.reportViewer5.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource5.Name = "BoxDataSet_DataTable4";
+            reportDataSource5.Value = this.DataTable4BindingSource;
+            this.reportViewer5.LocalReport.DataSources.Add(reportDataSource5);
+            this.reportViewer5.LocalReport.ReportEmbeddedResource = "Boxup.Reports.ItemSum.rdlc";
+            this.reportViewer5.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer5.Name = "reportViewer5";
+            this.reportViewer5.Size = new System.Drawing.Size(886, 296);
+            this.reportViewer5.TabIndex = 0;
+            // 
+            // DataTable4BindingSource
+            // 
+            this.DataTable4BindingSource.DataMember = "DataTable4";
+            this.DataTable4BindingSource.DataSource = this.BoxDataSet;
+            // 
+            // DataTable4TableAdapter
+            // 
+            this.DataTable4TableAdapter.ClearBeforeFill = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -272,6 +352,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BoxDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable3BindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -279,6 +360,9 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable4BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -307,6 +391,14 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TabPage tabPage3;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer4;
+        private System.Windows.Forms.BindingSource DataTable3BindingSource;
+        private Boxup.BoxDataSetTableAdapters.DataTable3TableAdapter DataTable3TableAdapter;
+        private System.Windows.Forms.TabPage tabPage5;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer5;
+        private System.Windows.Forms.BindingSource DataTable4BindingSource;
+        private Boxup.BoxDataSetTableAdapters.DataTable4TableAdapter DataTable4TableAdapter;
     }
 }
 

@@ -95,10 +95,12 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BCLTask.rdlc" />
     <EmbeddedResource Include="Reports\BoxPlan.rdlc" />
     <EmbeddedResource Include="Reports\ContractTask.rdlc" />
     <EmbeddedResource Include="Reports\ContractTaskExport.rdlc" />
     <EmbeddedResource Include="Reports\BoxPlanNew.rdlc" />
+    <EmbeddedResource Include="Reports\ItemSum.rdlc" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>

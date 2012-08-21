@@ -132,20 +132,24 @@ namespace Boxup
                                 if (boxItems.Length == 5)
                                 {
                                     string model = "";
-                                    if (boxItems[1].LastIndexOf('L') < 0)
+                                    if (boxItems[1].LastIndexOf('L') < 0 && boxItems[1].LastIndexOf('A')<0)
                                         model = boxItems[1];
-                                    else 
+                                    else if (boxItems[1].LastIndexOf('L')>=0)
                                         model = boxItems[1].Substring(0,boxItems[1].LastIndexOf('L'));
+                                    else if(boxItems[1].LastIndexOf('A')>=0)
+                                        model = boxItems[1].Substring(0, boxItems[1].LastIndexOf('A'));
+
+                                    mainBoxItemInfo = new BoxItemInfo { ItemModel = boxItems[1].Trim(), ItemName = boxItems[2].Trim() };
 
                                     //if (items.Find(item => item.ItemName == boxItems[2].Trim()) != null)
-                                    if(items.Find(item=>item.ItemName.Equals(model,StringComparison.OrdinalIgnoreCase))!=null)
-                                        mainBoxItemInfo = new BoxItemInfo { ItemModel = boxItems[1].Trim(), ItemName = boxItems[2].Trim() };
-                                    else if (boxItems[2].Contains("#箱~"))
-                                    {
-                                        mainBoxItemInfo = new BoxItemInfo { ItemModel = boxItems[1].Trim(), ItemName = boxItems[2].Trim() };
-                                    }
-                                    else
-                                        mainBoxItemInfo = null;
+                                    //if(items.Find(item=>item.ItemName.Equals(model,StringComparison.OrdinalIgnoreCase))!=null)
+                                    //    mainBoxItemInfo = new BoxItemInfo { ItemModel = boxItems[1].Trim(), ItemName = boxItems[2].Trim() };
+                                    //else if (boxItems[2].Contains("#箱~"))
+                                    //{
+                                    //    mainBoxItemInfo = new BoxItemInfo { ItemModel = boxItems[1].Trim(), ItemName = boxItems[2].Trim() };
+                                    //}
+                                    //else
+                                    //    mainBoxItemInfo = null;
                                 }
                             }
                             else
@@ -172,23 +176,22 @@ namespace Boxup
                                                 }
                                             }
                                         }
-                                        else
+                                        
+                                        for (var i = 0; i < detailItems.Length; i = i + 3)
                                         {
-                                            for (var i = 0; i < detailItems.Length; i = i + 3)
+                                            var boxItemInfo = new BoxItemInfo();
+                                            boxItemInfo.ItemModel = mainBoxItemInfo.ItemModel;
+                                            boxItemInfo.ItemName = mainBoxItemInfo.ItemName;
+                                            boxItemInfo.BoxNo = int.Parse(detailItems[i].Trim());
+                                            boxItemInfo.ItemNum = int.Parse(detailItems[i + 2].Trim());
+                                            boxItemInfo.BoxDate = this.CurrentDate;
+                                            if (DataRepository.BoxItemProvider.Insert(boxItemInfo, trans) == 0)
                                             {
-                                                var boxItemInfo = new BoxItemInfo();
-                                                boxItemInfo.ItemModel = mainBoxItemInfo.ItemModel;
-                                                boxItemInfo.ItemName = mainBoxItemInfo.ItemName;
-                                                boxItemInfo.BoxNo = int.Parse(detailItems[i].Trim());
-                                                boxItemInfo.ItemNum = int.Parse(detailItems[i + 2].Trim());
-                                                boxItemInfo.BoxDate = this.CurrentDate;
-                                                if (DataRepository.BoxItemProvider.Insert(boxItemInfo, trans) == 0)
-                                                {
-                                                    trans.Rollback();
-                                                    return;
-                                                }
+                                                trans.Rollback();
+                                                return;
                                             }
                                         }
+                                        
                                     }
                                 }
                             }
@@ -206,9 +209,12 @@ namespace Boxup
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: 这行代码将数据加载到表“BoxDataSet.DataTable4”中。您可以根据需要移动或移除它。
+            // TODO: 这行代码将数据加载到表“BoxDataSet.DataTable3”中。您可以根据需要移动或移除它。
             // TODO: 这行代码将数据加载到表“BoxDataSet.DataTable2”中。您可以根据需要移动或移除它。
             //this.DataTable2TableAdapter.Fill(this.BoxDataSet.DataTable2);
-           
+
+            //this.reportViewer4.RefreshReport();
         }
 
         private void btnShowReport_Click(object sender, EventArgs e)
@@ -225,6 +231,14 @@ namespace Boxup
 
             this.reportViewer3.LocalReport.SetParameters(new[] { new ReportParameter("BoxDate", boxDate.ToShortDateString()) });
             this.reportViewer3.RefreshReport();
+
+            this.DataTable3TableAdapter.Fill(this.BoxDataSet.DataTable3, boxDate);
+            this.reportViewer4.LocalReport.SetParameters(new[] { new ReportParameter("BoxDate", boxDate.ToShortDateString()) });
+            this.reportViewer4.RefreshReport();
+
+            this.DataTable4TableAdapter.Fill(this.BoxDataSet.DataTable4, boxDate);
+            this.reportViewer5.LocalReport.SetParameters(new[]{new ReportParameter("BoxDate",boxDate.ToShortDateString()), });
+            this.reportViewer5.RefreshReport();
         }
 
         private void button2_Click(object sender, EventArgs e)

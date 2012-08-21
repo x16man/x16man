@@ -22,10 +22,16 @@ namespace Boxup
         {
             InitializeComponent();
             this.Items = DataRepository.ItemProvider.GetAll(null) as List<ItemInfo>;
-
-            foreach (var obj in this.Items)
+            var gss = this.Items.FindAll(item => item.c == 1);
+            foreach (var obj in gss)
             {
                 this.lbItem.Items.Add(string.Format("{0}|{1}",obj.ItemName,obj.d));
+            }
+            var bcl = this.Items.FindAll(item => item.c == 2);
+            foreach(var obj in bcl)
+            {
+                this.lbBCL.Items.Add(string.Format("{0}|{1}", obj.ItemName, obj.d));
+                
             }
         }
 
@@ -50,9 +56,10 @@ namespace Boxup
                         var obj = new ItemInfo();
                         obj.ItemName = sa[0].Trim();
                         obj.OldItemName = obj.ItemName;
-                        if(sa.Length>1)
+                        if(sa.Length>2)
                         {
                             obj.d = int.Parse(sa[1]);
+                            obj.c = int.Parse(sa[2]);
                         }
                         else
                         {
@@ -61,32 +68,46 @@ namespace Boxup
                         if (DataRepository.ItemProvider.Insert(obj, null))
                         {
                             this.Items.Add(obj);
-                            this.lbItem.Items.Add(string.Format("{0}|{1}", obj.ItemName, obj.d));
+                            if (obj.c == 1)
+                                this.lbItem.Items.Add(string.Format("{0}|{1}", obj.ItemName, obj.d));
+                            else if (obj.c == 2)
+                                this.lbBCL.Items.Add(string.Format("{0}|{1}", obj.ItemName, obj.d));
                         }
                     }
                 }
-               
-                
-                
             }
-            
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (this.lbItem.SelectedItem != null)
+            if (this.lbItem.SelectedItem != null || this.lbBCL.SelectedItem != null)
             {
-                
-                if (DataRepository.ItemProvider.Delete(this.lbItem.SelectedItem.ToString().Split("|".ToCharArray())[0],null) == false)
+                if (lbItem.SelectedItem != null)
                 {
-                    MessageBox.Show("删除失败！");
+
+                    if (DataRepository.ItemProvider.Delete(this.lbItem.SelectedItem.ToString().Split("|".ToCharArray())[0], null) == false)
+                    {
+                        MessageBox.Show("删除失败！");
+                    }
+                    else
+                    {
+                        var item = this.Items.Find(o => o.ItemName == this.lbItem.SelectedItem.ToString().Split("|".ToCharArray())[0]);
+                        this.Items.Remove(item);
+                        this.lbItem.Items.Remove(string.Format("{0}|{1}", item.ItemName, item.d));
+                    }
                 }
-                else 
+                else if(this.lbBCL.SelectedItem != null)
                 {
-                    var item = this.Items.Find(o => o.ItemName == this.lbItem.SelectedItem.ToString().Split("|".ToCharArray())[0]);
-                    this.Items.Remove(item);
-                    this.lbItem.Items.Remove(string.Format("{0}|{1}",item.ItemName,item.d));
+                    if (DataRepository.ItemProvider.Delete(this.lbBCL.SelectedItem.ToString().Split("|".ToCharArray())[0], null) == false)
+                    {
+                        MessageBox.Show("删除失败！");
+                    }
+                    else
+                    {
+                        var item = this.Items.Find(o => o.ItemName == this.lbBCL.SelectedItem.ToString().Split("|".ToCharArray())[0]);
+                        this.Items.Remove(item);
+                        this.lbBCL.Items.Remove(string.Format("{0}|{1}", item.ItemName, item.d));
+                    }
                 }
             }
             else
