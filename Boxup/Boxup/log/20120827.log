@@ -1,0 +1,60 @@
+--------------------------------Header-----------------------------------------
+--------------------------------Footer------------------------------------------
+--------------------------------Header-----------------------------------------
+2012-08-27 13:12:07,031 [1] ERROR Boxup.Data.AccessClient.AccessItemProvider [(null)] - 由于其 Required 属性设置为真(True)，字段 'Item.c' 不能包含 Null 值。在此字段中输入一个数值。
+System.Data.OleDb.OleDbException: 由于其 Required 属性设置为真(True)，字段 'Item.c' 不能包含 Null 值。在此字段中输入一个数值。
+   at System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   at System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   at System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   at System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   at System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   at Shmzh.Components.SystemComponent.AccessHelper.ExecuteNonQuery(OleDbConnection connection, String commandText, OleDbParameter[] commandParameters) in D:\TFS\公共库\Branches\2008\Shmzh.Component.SystemComponent\Helper\AccessHelper.cs:line 141
+   at Shmzh.Components.SystemComponent.AccessHelper.ExecuteNonQuery(String connectionString, String commandText, OleDbParameter[] commandParameters) in D:\TFS\公共库\Branches\2008\Shmzh.Component.SystemComponent\Helper\AccessHelper.cs:line 112
+   at Boxup.Data.AccessClient.AccessItemProvider.Insert(ItemInfo obj, TransactionManager trans) in G:\GitHub\x16man\Boxup\Boxup.Data.AccessClient\AccessItemProvider.cs:line 102
+2012-08-27 13:12:07,968 [1] ERROR Boxup.Data.AccessClient.AccessItemProvider [(null)] - 由于其 Required 属性设置为真(True)，字段 'Item.c' 不能包含 Null 值。在此字段中输入一个数值。
+System.Data.OleDb.OleDbException: 由于其 Required 属性设置为真(True)，字段 'Item.c' 不能包含 Null 值。在此字段中输入一个数值。
+   at System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   at System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   at System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   at System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   at System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   at Shmzh.Components.SystemComponent.AccessHelper.ExecuteNonQuery(OleDbConnection connection, String commandText, OleDbParameter[] commandParameters) in D:\TFS\公共库\Branches\2008\Shmzh.Component.SystemComponent\Helper\AccessHelper.cs:line 141
+   at Shmzh.Components.SystemComponent.AccessHelper.ExecuteNonQuery(String connectionString, String commandText, OleDbParameter[] commandParameters) in D:\TFS\公共库\Branches\2008\Shmzh.Component.SystemComponent\Helper\AccessHelper.cs:line 112
+   at Boxup.Data.AccessClient.AccessItemProvider.Insert(ItemInfo obj, TransactionManager trans) in G:\GitHub\x16man\Boxup\Boxup.Data.AccessClient\AccessItemProvider.cs:line 102
+2012-08-27 13:12:16,265 [1] ERROR Boxup.Data.AccessClient.AccessItemProvider [(null)] - 由于其 Required 属性设置为真(True)，字段 'Item.c' 不能包含 Null 值。在此字段中输入一个数值。
+System.Data.OleDb.OleDbException: 由于其 Required 属性设置为真(True)，字段 'Item.c' 不能包含 Null 值。在此字段中输入一个数值。
+   at System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   at System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   at System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   at System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   at System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   at Shmzh.Components.SystemComponent.AccessHelper.ExecuteNonQuery(OleDbConnection connection, String commandText, OleDbParameter[] commandParameters) in D:\TFS\公共库\Branches\2008\Shmzh.Component.SystemComponent\Helper\AccessHelper.cs:line 141
+   at Shmzh.Components.SystemComponent.AccessHelper.ExecuteNonQuery(String connectionString, String commandText, OleDbParameter[] commandParameters) in D:\TFS\公共库\Branches\2008\Shmzh.Component.SystemComponent\Helper\AccessHelper.cs:line 112
+   at Boxup.Data.AccessClient.AccessItemProvider.Insert(ItemInfo obj, TransactionManager trans) in G:\GitHub\x16man\Boxup\Boxup.Data.AccessClient\AccessItemProvider.cs:line 102
+2012-08-27 13:15:20,140 [1] ERROR Boxup.Data.AccessClient.AccessItemProvider [(null)] - 由于其 Required 属性设置为真(True)，字段 'Item.c' 不能包含 Null 值。在此字段中输入一个数值。
+System.Data.OleDb.OleDbException: 由于其 Required 属性设置为真(True)，字段 'Item.c' 不能包含 Null 值。在此字段中输入一个数值。
+   at System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   at System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   at System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   at System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   at System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   at Shmzh.Components.SystemComponent.AccessHelper.ExecuteNonQuery(OleDbConnection connection, String commandText, OleDbParameter[] commandParameters) in D:\TFS\公共库\Branches\2008\Shmzh.Component.SystemComponent\Helper\AccessHelper.cs:line 141
+   at Shmzh.Components.SystemComponent.AccessHelper.ExecuteNonQuery(String connectionString, String commandText, OleDbParameter[] commandParameters) in D:\TFS\公共库\Branches\2008\Shmzh.Component.SystemComponent\Helper\AccessHelper.cs:line 112
+   at Boxup.Data.AccessClient.AccessItemProvider.Insert(ItemInfo obj, TransactionManager trans) in G:\GitHub\x16man\Boxup\Boxup.Data.AccessClient\AccessItemProvider.cs:line 102
+--------------------------------Footer------------------------------------------
+--------------------------------Header-----------------------------------------
+--------------------------------Footer------------------------------------------
+--------------------------------Header-----------------------------------------
+2012-08-27 13:24:42,687 [1] ERROR Boxup.Data.AccessClient.AccessItemProvider [(null)] - 由于其 Required 属性设置为真(True)，字段 'Item.c' 不能包含 Null 值。在此字段中输入一个数值。
+System.Data.OleDb.OleDbException: 由于其 Required 属性设置为真(True)，字段 'Item.c' 不能包含 Null 值。在此字段中输入一个数值。
+   at System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   at System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   at System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   at System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   at System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   at Shmzh.Components.SystemComponent.AccessHelper.ExecuteNonQuery(OleDbConnection connection, String commandText, OleDbParameter[] commandParameters) in D:\TFS\公共库\Branches\2008\Shmzh.Component.SystemComponent\Helper\AccessHelper.cs:line 141
+   at Shmzh.Components.SystemComponent.AccessHelper.ExecuteNonQuery(String connectionString, String commandText, OleDbParameter[] commandParameters) in D:\TFS\公共库\Branches\2008\Shmzh.Component.SystemComponent\Helper\AccessHelper.cs:line 112
+   at Boxup.Data.AccessClient.AccessItemProvider.Insert(ItemInfo obj, TransactionManager trans) in G:\GitHub\x16man\Boxup\Boxup.Data.AccessClient\AccessItemProvider.cs:line 102
+--------------------------------Footer------------------------------------------
+--------------------------------Header-----------------------------------------
+--------------------------------Footer------------------------------------------

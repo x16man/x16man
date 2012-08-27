@@ -5650,20 +5650,20 @@ Order By Box.BoxSpec,BoxItem.ItemModel";
             this._commandCollection[0].CommandText = @"Select BoxContract.ContractNo,BoxContract.BoxNo,A.ItemName,A.ItemModel,A.Model,A.Length,A.ItemNum,A.d,A.BoxDate,Box.BoxSpec,Box.BoxModel
 From ((BoxContract Left Outer Join
        (Select BoxItem.BoxNo,BoxItem.ItemName,BoxItem.ItemModel,
-               IIF(IsNull(BoxItem.ItemModel),null,Left(BoxItem.ItemModel,Instr(BoxItem.ItemModel,'L')-1)) as Model,
-               IIF(IsNULL(BoxItem.ItemModel),null,Right(BoxItem.ItemModel,Len(BoxItem.ItemModel)-Instr(BoxItem.ItemModel,'L'))) as Length,
+               IIF(IsNull(BoxItem.ItemModel),null,IIF(InStr(BoxItem.ItemModel,'L')=0,BoxItem.ItemModel,Left(BoxItem.ItemModel,Instr(BoxItem.ItemModel,'L')-1))) as Model,
+               IIF(IsNULL(BoxItem.ItemModel),null,IIF(InStr(BoxItem.ItemModel,'L')=0,null,Right(BoxItem.ItemModel,Len(BoxItem.ItemModel)-Instr(BoxItem.ItemModel,'L')))) as Length,
                BoxItem.ItemNum,Item.d,BoxItem.BoxDate
-        From BoxItem Inner Join Item
-        ON Instr(BoxItem.ItemModel,Item.ItemName)>0
-        Where Item.C=1) As A
+        From BoxItem ,Item
+        Where Instr(BoxItem.ItemModel,Item.ItemName)>0 And
+              Item.C=1 And
+              BoxItem.BoxDate=@BoxDate) As A
 On BoxContract.BoxNo = A.BoxNo And
-   BoxContract.BoxDate = A.BoxDate)
+   BoxContract.BoxDate = A.BoxDate)  
 Left Outer Join Box
 On BoxContract.BoxNo = Box.BoxNo And
    BoxContract.BoxDate = Box.BoxDate)
-Where BoxContract.BoxDate = ?
-Order By Box.BoxNo ASC,BoxContract.ContractNo ASC,A.ItemNum DESC
-";
+Where BoxContract.BoxDate = @BoxDate
+Order By Box.BoxNo ASC,BoxContract.ContractNo ASC,A.ItemNum DESC";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BoxDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BoxDate", global::System.Data.DataRowVersion.Current, false, null));
         }

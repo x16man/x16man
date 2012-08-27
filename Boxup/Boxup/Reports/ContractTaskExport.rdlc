@@ -73,19 +73,29 @@
           <DataField>d</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
+        <Field Name="d1">
+          <DataField>d1</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>BoxConnectionString</DataSourceName>
-        <CommandText>SELECT BoxContract.ContractNo, BoxItem.BoxNo, BoxItem.ItemName, BoxItem.ItemModel,Left(BoxItem.ItemModel,Instr(BoxItem.ItemModel,'L')-1) as Model,Right(BoxItem.ItemModel,Len(BoxItem.ItemModel)-Instr(BoxItem.ItemModel,'L')) as Length,
-      BoxItem.ItemNum, BoxContract.BoxDate,Box.BoxSpec,Box.BoxModel,Item.d
-FROM BoxContract ,BoxItem, Box, Item
-Where  BoxContract.BoxDate = BoxItem.BoxDate AND
-       BoxContract.BoxDate = Box.BoxDate And 
-      BoxContract.BoxNo = BoxItem.BoxNo And
-      BoxContract.BoxNo = Box.BoxNo And
-     BoxContract.BoxDate = ? And
-      Left(BoxItem.ItemModel,Instr(BoxItem.ItemModel,'L')-1)=Item.ItemName
-Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
+        <CommandText>Select BoxContract.ContractNo,BoxContract.BoxNo,A.ItemName,A.ItemModel,A.Model,A.Length,A.ItemNum,A.d,A.BoxDate,Box.BoxSpec,Box.BoxModel
+From ((BoxContract Left Outer Join
+       (Select BoxItem.BoxNo,BoxItem.ItemName,BoxItem.ItemModel,
+               IIF(IsNull(BoxItem.ItemModel),null,IIF(InStr(BoxItem.ItemModel,'L')=0,BoxItem.ItemModel,Left(BoxItem.ItemModel,Instr(BoxItem.ItemModel,'L')-1))) as Model,
+               IIF(IsNULL(BoxItem.ItemModel),null,IIF(InStr(BoxItem.ItemModel,'L')=0,null,Right(BoxItem.ItemModel,Len(BoxItem.ItemModel)-Instr(BoxItem.ItemModel,'L')))) as Length,
+               BoxItem.ItemNum,Item.d,BoxItem.BoxDate
+        From BoxItem Inner Join Item
+        ON Instr(BoxItem.ItemModel,Item.ItemName)&gt;0
+        Where Item.C=1) As A
+On BoxContract.BoxNo = A.BoxNo And
+   BoxContract.BoxDate = A.BoxDate)
+Left Outer Join Box
+On BoxContract.BoxNo = Box.BoxNo And
+   BoxContract.BoxDate = Box.BoxDate)
+Where BoxContract.BoxDate = ?
+Order By Box.BoxNo ASC,BoxContract.ContractNo ASC,A.ItemNum DESC</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <rd:DataSetInfo>
@@ -97,7 +107,7 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
-  <Width>23.25cm</Width>
+  <Width>25.32937cm</Width>
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>
@@ -433,7 +443,7 @@ Order By BoxContract.ContractNo ASC,BoxItem.ItemNum DESC</CommandText>
     "470*470*380",
     iif(
 		(InStr(Fields!ContractNo.Value,"N2M")&gt;0 or Instr(Fields!ContractNo.Value,"NEX")&gt;0 or Instr(Fields!ContractNo.Value,"GPM")&gt;0) And
-		(Fields!d.Value=12 or Fields!d.Value=14 or Fields!d.Value=16),
+		(Fields!d1.Value=12 or Fields!d1.Value=14 or Fields!d1.Value=16),
 		"900*900*500",
 		""
 		)
