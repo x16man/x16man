@@ -1,0 +1,27 @@
+Select BoxContract.ContractNo,BoxContract.BoxNo,A.ItemName,A.ItemModel,A.Model,A.Length,A.ItemNum,A.d,A.BoxDate,Box.BoxSpec,Box.BoxModel
+From ((BoxContract Left Outer Join
+       (Select BoxItem.BoxNo,BoxItem.ItemName,BoxItem.ItemModel,
+               Item.ItemName as Model,
+               IIF(IsNULL(BoxItem.ItemModel),null,Right(BoxItem.ItemModel,Len(BoxItem.ItemModel)-Instr(5,BoxItem.ItemModel,'A'))) as Length,
+               BoxItem.ItemNum,Item.d,BoxItem.BoxDate
+        From BoxItem Inner Join Item
+        ON Instr(BoxItem.ItemModel,Item.ItemName)>0
+        Where Item.c=2
+        ) As A
+On BoxContract.BoxNo = A.BoxNo And
+   BoxContract.BoxDate = A.BoxDate)
+Left Outer Join Box
+On BoxContract.BoxNo = Box.BoxNo And
+   BoxContract.BoxDate = Box.BoxDate)
+Where BoxContract.BoxDate = #2012-08-20#
+Order By Box.BoxNo ASC,BoxContract.ContractNo ASC,A.ItemNum DESC
+
+
+绝缘毯   
+
+六化安全达标。2012-05
+
+
+张西西：13501826185
+
+
